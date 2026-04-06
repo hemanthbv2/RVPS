@@ -293,21 +293,10 @@ input, select, textarea { font-family: var(--ff-body); border: none; outline: no
   color: var(--clr-dark);
 }
 
-.nav-logo .logo-icon {
-  width: 36px;
-  height: 36px;
-  background: var(--clr-secondary);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  transform: rotate(-5deg);
-  box-shadow: 0 3px 10px rgba(247,148,29,0.3);
-}
-
-.nav-logo span {
-  color: var(--clr-secondary);
+.nav-logo .nav-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
