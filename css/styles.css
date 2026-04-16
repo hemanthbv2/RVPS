@@ -985,6 +985,13 @@ input, select, textarea { font-family: var(--ff-body); border: none; outline: no
   box-shadow: var(--shadow-md);
 }
 
+.tab-grade-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-md);
+  box-shadow: var(--shadow-sm);
+}
+
 .tab-text h3 {
   font-family: var(--ff-heading);
   font-size: var(--fs-h3);
