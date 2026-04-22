@@ -172,12 +172,11 @@ textarea {
   margin-bottom: var(--space-xs);
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 12px;
 }
 
-.section-label::before {
+.section-label::before,
+.section-label::after {
   content: '';
   width: 24px;
   height: 3px;
@@ -189,7 +188,8 @@ textarea {
   color: var(--clr-secondary-light);
 }
 
-.section-label--light::before {
+.section-label--light::before,
+.section-label--light::after {
   background: var(--clr-secondary);
 }
 
@@ -1127,6 +1127,7 @@ textarea {
   font-weight: 700;
   color: var(--clr-dark);
   margin-bottom: 4px;
+  text-align: center;
 }
 
 .enquiry-form-card .form-desc {
@@ -1182,6 +1183,7 @@ textarea {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
+  align-items: flex-end;
 }
 
 .btn-submit {
@@ -1622,10 +1624,14 @@ textarea {
   z-index: 1;
 }
 
+.principal .section-title {
+  text-align: center;
+}
+
 .principal-content-flex {
   display: flex;
   gap: var(--space-xl);
-  align-items: center;
+  align-items: flex-start;
   margin-top: var(--space-md);
 }
 
@@ -1995,6 +2001,68 @@ textarea {
 
 .location .section-title {
   color: var(--clr-white);
+}
+
+.location-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.location-info-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.location-info-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-5px);
+  border-color: var(--clr-secondary);
+}
+
+.location-info-card-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--clr-secondary);
+  margin: 0 auto var(--space-sm);
+  display: block;
+}
+
+.location-info-card h4 {
+  font-family: var(--ff-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-white);
+  margin-bottom: var(--space-sm);
+}
+
+.location-info-card p {
+  color: var(--clr-text-on-dark);
+  font-size: var(--fs-small);
+  line-height: 1.6;
+}
+
+.location-info-card a {
+  color: var(--clr-secondary);
+  font-weight: 600;
+  transition: opacity var(--transition-fast);
+}
+
+.location-info-card a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .location-info-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
 }
 
 .map-placeholder {
